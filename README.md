@@ -19,6 +19,26 @@ Centralizar alguns dockers básicos para serem utilizados de maneira práticas p
 * Servidor Apache2 para renderizar páginas htmls.
 * Responde na porta 80 (localhost)
 
+# lambda_node
+* Plugin serverless para testar funções aws lambda em node js
+* Habilita a porta 3000 para requisições no serverless
+
+É necessário enviar suas credenciais aws como variárveis de ambiente no momento de executar o container da seguinte forma:
+
+```shell script
+docker run \
+-it \
+--name serverless-docker \
+--network host \
+-e AWS_REGION=us-east-1 \
+-e AWS_ACCESS_KEY_ID=<sua key aqui> \
+-e AWS_SECRET_ACCESS_KEY=<sua secret aqui> \
+serverless-docker
+docker start -a -i serverless-docker
+```
+
+\* `serverless-docker` é o nome do build da imagem desse exemplo
+ 
 
 ## Pastas
 
