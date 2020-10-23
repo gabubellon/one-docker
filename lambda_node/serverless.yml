@@ -16,7 +16,6 @@ provider:
       - subnet-1858507a
   environment:
     
-
 functions:
   example:
     handler: example.handler

@@ -35,11 +35,12 @@ services:
     ports:
       - 80:80
 
-  serverless-docker:
-    container_name: serverless-docker
+  lambda_node:
+    container_name: lambda_node
     build:
       context: lambda_node
     env_file:
       - .env
     ports:
-      - 3000: 3000
+      - 3000:3000
+    network_mode: host
