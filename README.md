@@ -23,17 +23,17 @@ Centralizar alguns dockers básicos para serem utilizados de maneira práticas p
 * Plugin serverless para testar funções aws lambda em node js
 * Habilita a porta 3000 para requisições no serverless
 
-É necessário enviar suas credenciais aws como variárveis de ambiente no momento de executar o container da seguinte forma:
+Se for necessário utilizar alguma biblioteca da aws, é preciso enviar suas credenciais aws como variáveis de ambiente no arquivo .env (veja o exemplo no arquivo .env_sample):
+
+Exemplo de execução do container:
 
 ```shell script
 docker run \
 -it \
 --name serverless-docker \
 --network host \
--e AWS_REGION=us-east-1 \
--e AWS_ACCESS_KEY_ID=<sua key aqui> \
--e AWS_SECRET_ACCESS_KEY=<sua secret aqui> \
 serverless-docker
+
 docker start -a -i serverless-docker
 ```
 
