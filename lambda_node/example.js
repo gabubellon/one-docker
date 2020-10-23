@@ -1,5 +1,5 @@
 'use strict';
 
 exports.handler = (event, context, callback) => {
-    return "Your function here"
+    callback(null, "Your function here");
 };

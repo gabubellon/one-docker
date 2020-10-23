@@ -19,4 +19,4 @@ RUN npm install
 
 EXPOSE 3000/tcp
 
-ENTRYPOINT sls offline start
+ENTRYPOINT sls offline start --useDocker --dockerHost host.docker.internal --dockerHostServicePath ${PWD} --host 0.0.0.0 --noPrependStageInUrl
