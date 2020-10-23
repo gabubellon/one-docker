@@ -17,4 +17,6 @@ RUN npm install -g npm@latest \
 COPY . .
 RUN npm install
 
-CMD ["sls", "offline", "--host", "0.0.0.0" ]
+EXPOSE 3000/tcp
+
+ENTRYPOINT sls offline start
