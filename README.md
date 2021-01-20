@@ -1,6 +1,6 @@
-# one-docker-bring-them-all
+# one-docker
 
-One repository to centralize dockers and dockers-compose useful for everyday use.
+One docker to rule them all, One docker to find them, One docker to bring them all and in the darkness bind them.
 
 ## Objetivo
 
